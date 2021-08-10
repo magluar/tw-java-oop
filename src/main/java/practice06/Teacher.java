@@ -11,4 +11,9 @@ public class Teacher extends Person{
     public Klass getKlass() {
         return this.klass;
     }
+
+    public String introduce() {
+        return "My name is " + getName() + ". I am " + getAge() + " years old. I am a Teacher. I teach Class "
+                + klass.getNumber() + ".";
+    }
 }
