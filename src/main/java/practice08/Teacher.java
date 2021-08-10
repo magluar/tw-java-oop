@@ -1,6 +1,7 @@
 package practice08;
 
 
+
 public class Teacher extends Person{
     private final Klass klass;
 
@@ -24,5 +25,10 @@ public class Teacher extends Person{
                     getKlass().getNumber() + ".";
         }
         return "My name is " + getName() + ". I am " + getAge() + " years old. I am a Teacher. I teach No Class.";
+    }
+
+    public String introduceWith(Student student) {
+        return "My name is " + getName() + ". I am " + getAge() + " years old. I am a Teacher. I teach "
+                + student.getName() + ".";
     }
 }
