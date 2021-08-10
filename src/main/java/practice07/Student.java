@@ -26,6 +26,11 @@ public class Student {
     }
 
     public String introduce() {
+        if (getKlass().getLeader() != null) {
+//            "My name is Tom. I am 21 years old. I am a Student. I am Leader of Class 2.";
+            return "My name is " + getName() + ". I am " + getAge() + " years old. I am a Student. I am Leader of " +
+                    "Class " + klass.getNumber() + ".";
+        }
         return "My name is " + getName() + ". I am " + getAge() + " years old. I am a Student. I am at Class "
                 + klass.getNumber() + ".";
     }
