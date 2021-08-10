@@ -18,7 +18,6 @@ public class Teacher extends Person{
         return this.klass;
     }
 
-//"My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2."
     public String introduce(){
         if (this.klass != null){
             return "My name is " + getName() + ". I am " + getAge() + " years old. I am a Teacher. I teach Class " +
