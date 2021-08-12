@@ -37,7 +37,16 @@ public class Teacher extends Person{
     }
 
     public String introduceWith(Student student) {
-        return "My name is " + getName() + ". I am " + getAge() + " years old. I am a Teacher. I teach "
+        assert classList != null;
+        Integer teacherKlass = classList.stream()
+                .map(Klass::getNumber)
+                .findFirst()
+                .orElse(null);
+        if (teacherKlass == student.getKlass().getNumber()){
+            return "My name is " + getName() + ". I am " + getAge() + " years old. I am a Teacher. I teach "
+                    + student.getName() + ".";
+        }
+        return "My name is " + getName() + ". I am " + getAge() + " years old. I am a Teacher. I don't teach "
                 + student.getName() + ".";
     }
 }
