@@ -20,7 +20,6 @@ public class Teacher extends Person{
     public LinkedList<Klass> getClasses() {
         return this.classList;
     }
-//My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2, 3.
     public String introduce() {
         if (classList != null) {
             String numOfClasses = classList.stream()
@@ -35,5 +34,10 @@ public class Teacher extends Person{
     public boolean isTeaching(Student student) {
         assert classList != null;
         return classList.contains(student.getKlass());
+    }
+
+    public String introduceWith(Student student) {
+        return "My name is " + getName() + ". I am " + getAge() + " years old. I am a Teacher. I teach "
+                + student.getName() + ".";
     }
 }
